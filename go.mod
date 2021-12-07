@@ -1,3 +1,3 @@
-module main.go
+module github.com/pokacyb/pokafoto
 
 go 1.17
