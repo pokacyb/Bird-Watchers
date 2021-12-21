@@ -1,3 +1,3 @@
-# pokafoto
+# Bird Watchers
 
-Photo gallery webapp written in Go
+Bird pictures and sounds sharing website written with Go in the backend.
