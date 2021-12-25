@@ -23,6 +23,7 @@ func pathHandler(w http.ResponseWriter, r *http.Request) {
 		contactHandler(w, r)
 	default:
 		// TODO handle the page not found error
+		http.NotFound(w, r)
 	}
 }
 
