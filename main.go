@@ -27,11 +27,19 @@ func faqHandler(w http.ResponseWriter, r *http.Request) {
 `)
 }
 
+func goodiesHandler(w http.ResponseWriter, r *http.Request) {
+	userID := chi.URLParam(r, "userID")
+
+	// respond to the client
+	w.Write([]byte(fmt.Sprintf("hi %v", userID)))
+}
+
 func main() {
 	r := chi.NewRouter()
 	r.Get("/", homeHandler)
 	r.Get("/contact", contactHandler)
 	r.Get("/faq", faqHandler)
+	r.Get("/goodies", goodiesHandler)
 	r.NotFound(func(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Page not found", http.StatusNotFound)
 	})
